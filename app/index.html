@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/media-queries.css" />
+        <link rel="stylesheet" href="/css/preview-box.css" />
+        <title>In-browser markdown editor</title>
+    </head>
+    <body>
+        <div class="app">
+            <header class="header flex flex-jc-sb flex-ai-c">
+                <div class="flex flex-ai-c">
+                    <div class="hamburger-container flex flex-jc-c flex-ai-c">
+                        <img
+                            class="hamburger-button"
+                            src="/img/menu-burger.svg"
+                            alt="menu-burger"
+                        />
+                    </div>
+                    <div class="logo-container">
+                        <h1 class="logo-text">MARKDOWN</h1>
+                    </div>
+                    <div class="file-name-container flex flex-ai-c">
+                        <img
+                            class="icon"
+                            src="/img/document.svg"
+                            alt="document"
+                        />
+                        <div class="flex flex-dir-col">
+                            <p class="document-name-text">Document Name</p>
+                            <p class="document-name">README</p>
+                            <input
+                                class="document-id"
+                                type="hidden"
+                                value="aORF9SC9ULF6ipUW9v4X"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="actions-container flex flex-ai-c">
+                    <a class="download-button flex flex-ai-c" href="#"
+                        ><img
+                            class="icon"
+                            src="/img/download.svg"
+                            alt="download"
+                        />
+                        <span class="download-text">Download</span></a
+                    >
+                </div>
+            </header>
+            <main class="main flex">
+                <div class="editor-container section flex flex-dir-col">
+                    <div class="section-header flex flex-ai-c">
+                        <p>M A R K D O W N</p>
+                    </div>
+                    <textarea
+                        class="editor-box vertical-scroll-bar"
+                        spellcheck="false"
+                    ></textarea>
+                </div>
+                <div class="preview-container section flex flex-dir-col">
+                    <div class="section-header flex flex-ai-c">
+                        <p>P R E V I E W</p>
+                    </div>
+                    <div class="preview-box vertical-scroll-bar"></div>
+                </div>
+                <img
+                    class="eye-crossed eye-icon"
+                    src="/img/eye-crossed.svg"
+                    alt="eye-crossed"
+                />
+                <img class="eye eye-icon" src="/img/eye.svg" alt="eye" />
+            </main>
+            <div class="sliding-menu flex flex-dir-col">
+                <div class="close-menu-button-container">
+                    <img
+                        class="close-menu-button"
+                        src="/img/cross.svg"
+                        alt="cross"
+                    />
+                </div>
+                <div
+                    class="readme-tile document sliding-menu-document-tile flex flex-ai-c"
+                >
+                    <img src="/img/hastag.svg" alt="hastag" />
+                    <p class="md-doc-name">README</p>
+                    <input
+                        class="readme-document-id"
+                        type="hidden"
+                        value="aORF9SC9ULF6ipUW9v4X"
+                    />
+                </div>
+                <div class="document-list-container vertical-scroll-bar"></div>
+                <div
+                    class="create-new-document-container sliding-menu-document-tile flex flex-ai-c"
+                >
+                    <img src="/img/plus.svg" alt="plus" />
+                    <input type="text" placeholder="Create new markdown" />
+                </div>
+                <div
+                    class="profile-options-container flex flex-jc-sb flex-ai-c"
+                >
+                    <img class="icon" src="/img/user.svg" alt="user" />
+                    <img
+                        class="logout-button icon"
+                        src="/img/sign-out-alt.svg"
+                        alt="sign-out-alt"
+                    />
+                    <input class="user-id" type="hidden" value="" />
+                </div>
+            </div>
+        </div>
+        <div class="auth-container flex flex-dir-col flex-jc-c flex-ai-c">
+            <a
+                class="log-in-with-google-button flex flex-jc-c flex-ai-c"
+                href="#"
+                >LOG IN WITH GOOGLE <img src="/img/google.svg" alt="google"
+            /></a>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.js"
+            integrity="sha512-yucm4wm2T2mZNzxtKGWQLTsMAGI+KNFRLsfFDNO9SqdMn9eauAORCybt1UnXRAAlrxJoFpdLSR9lhfuCKx22kQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="/js/firebase.js" type="module"></script>
+        <script src="/js/script.js" type="module"></script>
+    </body>
+</html>

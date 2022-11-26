@@ -1,0 +1,69 @@
+/* width >= 768px */
+
+@media screen and (min-width: 768px) {
+    .hamburger-container {
+        margin: 0;
+    }
+    .logo-text {
+        display: block;
+        font-family: "Gemunu Libre", sans-serif;
+        font-size: 1.5rem;
+        margin-inline: 1.5rem;
+        color: var(--color-white);
+        cursor: default;
+    }
+    .file-name-container::before {
+        content: "";
+        height: 2.0625rem;
+        width: 0.09375rem;
+        background-color: var(--color-light-gray);
+        margin-right: 1.125rem;
+    }
+    .document-name-text {
+        display: block;
+        color: var(--color-light-gray);
+        font-size: 1.0625rem;
+        font-weight: 300;
+        cursor: default;
+    }
+    .download-button > img {
+        display: none;
+    }
+    .download-button {
+        background: none;
+        border: 2px solid #e16845;
+        color: #e16845;
+        transition: all 300ms ease-in-out;
+    }
+    .download-text {
+        display: block;
+        font-size: 1rem;
+    }
+    .download-button:hover {
+        background: #e16845;
+        color: var(--color-white);
+    }
+}
+
+/* width >= 576px */
+
+@media screen and (min-width: 576px) {
+    .preview-container {
+        display: block;
+        border-left: 1px solid #2c2e32;
+    }
+    .preview-box {
+        height: calc(100% - 2rem);
+        width: 100%;
+        padding: 0.75rem 0.5rem;
+    }
+    .eye {
+        display: block;
+    }
+    .eye-crossed {
+        display: none;
+    }
+    .sliding-menu {
+        width: 27rem;
+    }
+}
